@@ -4,6 +4,10 @@
   "private": true,
   "description": "",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/webdeveric/predicate-vs-schema.git"
+  },
   "scripts": {
     "build": "node ./build.mjs",
     "typecheck": "tsc --build --verbose",

@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@webdeveric/utils':
-        specifier: ^0.66.1
-        version: 0.66.1
+        specifier: ^0.67.0
+        version: 0.67.0
       yup:
         specifier: ^1.6.1
         version: 1.6.1
@@ -387,8 +387,8 @@ packages:
     peerDependencies:
       prettier: '>=2.4.0'
 
-  '@webdeveric/utils@0.66.1':
-    resolution: {integrity: sha512-gEjEmfyfGuSwx5uHmCmL2pnwyu/BHT3NOhk51/oE0O3hLxgH1BuaVMEoXwfJdQcpT9yWJ5/F65LVG6YziLQl8Q==}
+  '@webdeveric/utils@0.67.0':
+    resolution: {integrity: sha512-MxbrBx4dqCRnLR40Q8J7gjm5hN/UzoqaOVBTBqVsu2ZVHoOvAE1VuWvEj6V8lHNMh3p73QNtGbeWr00jqjKtHw==}
     engines: {node: '>=18.0.0'}
 
   agent-base@7.1.3:
@@ -1181,7 +1181,7 @@ snapshots:
     dependencies:
       prettier: 3.6.2
 
-  '@webdeveric/utils@0.66.1': {}
+  '@webdeveric/utils@0.67.0': {}
 
   agent-base@7.1.3: {}
 

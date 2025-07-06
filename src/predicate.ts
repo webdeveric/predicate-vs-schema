@@ -1,6 +1,7 @@
 import { isString } from '@webdeveric/utils/predicate/isString';
 import { shape } from '@webdeveric/utils/predicate/factory/shape';
 import { isPositiveFiniteNumber } from '@webdeveric/utils/predicate/isPositiveFiniteNumber';
+import type { InferPredicateReturnType } from '@webdeveric/utils/types/functions';
 
 export const isData = shape({
   name: isString,
@@ -15,3 +16,5 @@ export const isData = shape({
     }),
   }),
 });
+
+export type Data = InferPredicateReturnType<typeof isData>;

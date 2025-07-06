@@ -13,3 +13,5 @@ export const dataSchemaZod = z.object({
     }),
   }),
 });
+
+export type Data = z.infer<typeof dataSchemaZod>;

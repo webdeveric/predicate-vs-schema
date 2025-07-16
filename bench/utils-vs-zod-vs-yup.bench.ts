@@ -1,7 +1,8 @@
 import { bench } from 'vitest';
 
 import { isData } from '../dist/predicate.mjs';
-import { dataSchemaZod } from '../dist/zod.mjs';
+import { dataSchemaZod as dataSchemaZod3 } from '../dist/zod3.mjs';
+import { dataSchemaZod as dataSchemaZod4 } from '../dist/zod4.mjs';
 import { dataSchemaYup } from '../dist/yup.mjs';
 
 const data = {
@@ -18,18 +19,55 @@ const data = {
   },
 };
 
-bench('isData()', () => {
-  isData(data);
-});
+const options = {
+  // time: 1000,
+  iterations: 10_000,
+};
 
-bench('dataSchemaZod.safeParse()', () => {
-  dataSchemaZod.safeParse(data).success;
-});
+bench(
+  'isData()',
+  () => {
+    isData(data);
+  },
+  options,
+);
 
-bench('dataSchemaZod.parse()', () => {
-  dataSchemaZod.parse(data);
-});
+bench(
+  'dataSchemaZod3.safeParse()',
+  () => {
+    dataSchemaZod3.safeParse(data).success;
+  },
+  options,
+);
 
-bench('dataSchemaYup.validate()', () => {
-  dataSchemaYup.validate(data);
-});
+bench(
+  'dataSchemaZod3.parse()',
+  () => {
+    dataSchemaZod3.parse(data);
+  },
+  options,
+);
+
+bench(
+  'dataSchemaZod4.safeParse()',
+  () => {
+    dataSchemaZod4.safeParse(data).success;
+  },
+  options,
+);
+
+bench(
+  'dataSchemaZod4.parse()',
+  () => {
+    dataSchemaZod4.parse(data);
+  },
+  options,
+);
+
+bench(
+  'dataSchemaYup.validate()',
+  () => {
+    dataSchemaYup.validate(data);
+  },
+  options,
+);

@@ -27,12 +27,13 @@
   "dependencies": {
     "@webdeveric/utils": "^0.67.0",
     "yup": "^1.6.1",
-    "zod": "^3.25.74"
+    "zod3": "npm:zod@^3.25.76",
+    "zod4": "npm:zod@^4.0.5"
   },
   "devDependencies": {
-    "@types/node": "^24.0.10",
+    "@types/node": "^24.0.14",
     "@webdeveric/prettier-config": "^0.3.0",
-    "esbuild": "^0.25.5",
+    "esbuild": "^0.25.6",
     "esbuild-plugin-clean": "^1.0.1",
     "jsdom": "^26.1.0",
     "prettier": "^3.6.2",

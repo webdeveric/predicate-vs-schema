@@ -2,7 +2,9 @@ import { bench } from 'vitest';
 
 import { isData } from '../dist/predicate.mjs';
 import { dataSchemaZod as dataSchemaZod3 } from '../dist/zod3.mjs';
+import { dataSchemaZod as dataSchemaZod3NamedImports } from '../dist/zod3-named-imports.mjs';
 import { dataSchemaZod as dataSchemaZod4 } from '../dist/zod4.mjs';
+import { dataSchemaZod as dataSchemaZod4NamedImports } from '../dist/zod4-named-imports.mjs';
 import { dataSchemaYup } from '../dist/yup.mjs';
 
 const data = {
@@ -49,6 +51,22 @@ bench(
 );
 
 bench(
+  'dataSchemaZod3NamedImports.safeParse()',
+  () => {
+    dataSchemaZod3NamedImports.safeParse(data).success;
+  },
+  options,
+);
+
+bench(
+  'dataSchemaZod3NamedImports.parse()',
+  () => {
+    dataSchemaZod3NamedImports.parse(data);
+  },
+  options,
+);
+
+bench(
   'dataSchemaZod4.safeParse()',
   () => {
     dataSchemaZod4.safeParse(data).success;
@@ -60,6 +78,22 @@ bench(
   'dataSchemaZod4.parse()',
   () => {
     dataSchemaZod4.parse(data);
+  },
+  options,
+);
+
+bench(
+  'dataSchemaZod4NamedImports.safeParse()',
+  () => {
+    dataSchemaZod4NamedImports.safeParse(data).success;
+  },
+  options,
+);
+
+bench(
+  'dataSchemaZod4NamedImports.parse()',
+  () => {
+    dataSchemaZod4NamedImports.parse(data);
   },
   options,
 );

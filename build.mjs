@@ -5,7 +5,7 @@ import { clean } from 'esbuild-plugin-clean';
 
 try {
   const results = await build({
-    entryPoints: ['./src/predicate.ts', './src/zod3.ts', './src/zod4.ts', './src/yup.ts'],
+    entryPoints: ['./src/*.ts'],
     outdir: './dist',
     platform: 'node',
     bundle: true,

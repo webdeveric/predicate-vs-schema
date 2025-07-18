@@ -1,15 +1,15 @@
-import { number, object, string, type z } from 'zod3';
+import { z } from 'zod3';
 
-export const dataSchemaZod = object({
-  name: string(),
-  age: number().min(0),
-  job: object({
-    title: string(),
-    company: string(),
-    location: object({
-      city: string(),
-      state: string(),
-      country: string(),
+export const dataSchemaZod = z.object({
+  name: z.string(),
+  age: z.number().min(0),
+  job: z.object({
+    title: z.string(),
+    company: z.string(),
+    location: z.object({
+      city: z.string(),
+      state: z.string(),
+      country: z.string(),
     }),
   }),
 });

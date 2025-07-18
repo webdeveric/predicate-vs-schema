@@ -1,6 +1,7 @@
 import { bench } from 'vitest';
 
 import { isData } from '../dist/predicate.mjs';
+import { isData as isData_specific_imports } from '../dist/predicate-specific-imports.mjs';
 import { dataSchemaZod as dataSchemaZod3 } from '../dist/zod3.mjs';
 import { dataSchemaZod as dataSchemaZod3NamedImports } from '../dist/zod3-named-imports.mjs';
 import { dataSchemaZod as dataSchemaZod4 } from '../dist/zod4.mjs';
@@ -30,6 +31,14 @@ bench(
   'isData()',
   () => {
     isData(data);
+  },
+  options,
+);
+
+bench(
+  'isData_specific_imports()',
+  () => {
+    isData_specific_imports(data);
   },
   options,
 );
